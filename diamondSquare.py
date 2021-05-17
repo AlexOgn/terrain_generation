@@ -94,6 +94,3 @@ class DiamondSquare():
 
     def show(self):
         self.img.show()
-
-
-####
