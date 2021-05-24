@@ -1,9 +1,8 @@
 from perlinNoise import PerlinNoise
 from diamondSquare import DiamondSquare
 
-diamond = DiamondSquare(1025, 1025)
-diamond.compute()
-diamond.show()
+#diamond = DiamondSquare(65, 65)
+#diamond.run3D()
 
-
-
+#perlin = PerlinNoise(129, 129)
+#perlin.run3D()

@@ -1,12 +1,18 @@
 import noise
 import random
 from PIL import Image
+from mpl_toolkits.mplot3d import Axes3D
+import matplotlib.pyplot as plt
+import numpy as np
+
 class PerlinNoise():
-    def __init__(self, _octaves, _frequency, _sizeX, _sizeY):
+    def __init__(self, _sizeX, _sizeY, _octaves = 5, _frequency = 150):
         self.octaves = _octaves
         self.frequency = _frequency
         self.sizeX = _sizeX
         self.sizeY = _sizeY
+        self.grid =  self.grid = [[-1 for x in range(self.sizeX)]
+                     for y in range(self.sizeY)]
         self.seed = random.uniform(-10000, 10000)
         self.img = Image.new('RGB', (self.sizeX, self.sizeY), "black")
         self.pixels = self.img.load()
@@ -16,6 +22,7 @@ class PerlinNoise():
             for j in range(self.img.size[1]):
                 height = int(noise.snoise3(i/self.frequency, j /
                                         self.frequency, self.seed, self.octaves) * 127 + 128)
+                self.grid[i][j] = height
                 if height < 110:  # voda
                     self.pixels[i, j] = (0, 0, abs(255-height))
                 elif height < 140:  # treva
@@ -27,7 +34,23 @@ class PerlinNoise():
 
     def show(self):
         self.img.show()
-    
+
+    def show3D(self):
+        # trqq da e po-maluk grid
+        z = np.array(self.grid)
+        x, y = np.meshgrid(range(z.shape[0]), range(z.shape[1]))
+
+        # show hight map in 3d
+        fig = plt.figure()
+        ax = fig.add_subplot(111, projection='3d')
+        ax.plot_surface(x, y, z)
+        plt.title('Perlin noise height map')
+        plt.show()
+
     def run(self):
         self.compute()
         self.show()
+
+    def run3D(self):
+        self.compute()
+        self.show3D()
