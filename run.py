@@ -6,3 +6,5 @@ from diamondSquare import DiamondSquare
 
 #perlin = PerlinNoise(129, 129)
 # perlin.run3D()
+
+#github test dali she bachka
