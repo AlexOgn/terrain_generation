@@ -115,11 +115,11 @@ class DiamondSquare():
         ax.plot_surface(x, y, z)
         plt.title('Diamond square height map')
         plt.show()
-    
+
     def run(self):
-            self.compute()
-            self.show()
-    
+        self.compute()
+        self.show()
+
     def run3D(self):
-            self.compute()
-            self.show3D()
+        self.compute()
+        self.show3D()
