@@ -1,7 +1,7 @@
 # Terrain generation
 Alex Ognyanov project
 
-Generates terrain pseudo-random terrain and has 3D visualisation options
+Generates pseudo-random terrain and has 3D visualisation options
 
 # Algorithms implemented:
   - Diamond Square
