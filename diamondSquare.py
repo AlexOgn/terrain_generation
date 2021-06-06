@@ -8,6 +8,10 @@ import numpy as np
 
 class DiamondSquare():
     def __init__(self, _sizeX, _sizeY):
+        if(isinstance(_sizeX, int)):
+            raise Exception("First argument (sizeX) is not integer")
+        if(isinstance(_sizeY, int)):
+            raise Exception("Second argument (sizeY) is not integer")    
         self.sizeX = _sizeX
         self.sizeY = _sizeY
         self.img = Image.new('RGB', (self.sizeX, self.sizeY), "black")
