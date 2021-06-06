@@ -3,7 +3,7 @@ Alex Ognyanov project
 
 Generates pseudo-random terrain and has 3D visualisation options
 
-# Instalation
+# Installation
 ```cmd
 git clone https://github.com/AlexOgn/terrain_generation.git
 ```
