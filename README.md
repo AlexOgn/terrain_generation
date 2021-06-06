@@ -3,6 +3,15 @@ Alex Ognyanov project
 
 Generates pseudo-random terrain and has 3D visualisation options
 
+# Instalation
+```cmd
+git clone https://github.com/AlexOgn/terrain_generation.git
+```
+
+```cmd
+pip install -r requirements.txt
+```
+
 # Algorithms implemented:
   - Diamond Square
   - Perlin Noise
