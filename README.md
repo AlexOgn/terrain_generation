@@ -13,6 +13,20 @@ Generates terrain pseudo-random terrain and has 3D visualisation options
   - `show3D()` - writes to 3D mesh and shows it using matlib
   - `run()` - `compute()` + `show()`
   - `run3D()` - `compute()` + `show3D()`
+  - :warning: **3D visualization should be with smaller grid (128 x 128 max)**
+  
+
+# Demo code:
+```python
+from perlinNoise import PerlinNoise
+from diamondSquare import DiamondSquare
+
+diamond = DiamondSquare(1025, 1025)
+diamond.run()
+
+perlin = PerlinNoise(1025, 1025)
+perlin.run()
+```
 
 # Documentation
 ## Diamond Square
