@@ -8,6 +8,15 @@ import numpy as np
 
 class PerlinNoise():
     def __init__(self, _sizeX, _sizeY, _octaves=5, _frequency=150):
+        if not isinstance(_sizeX, int):
+            raise Exception("First argument (sizeX) is not integer")
+        if not isinstance(_sizeY, int):
+            raise Exception("Second argument (sizeY) is not integer")
+        if not isinstance(_octaves, int):
+            raise Exception("First argument (octaves) is not integer")
+        if not isinstance(_frequency, int):
+            raise Exception("Second argument (frequency) is not integer")
+
         self.octaves = _octaves
         self.frequency = _frequency
         self.sizeX = _sizeX
